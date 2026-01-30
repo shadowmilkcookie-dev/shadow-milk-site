@@ -3,38 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shadow Milk Cookie | Multiverse Archive</title>
+    <title>Shadow Milk Cookie | Official Archive</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { 
-            background-color: #050505; 
-            color: #e5e7eb; 
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .gradient-text { 
-            background: linear-gradient(90deg, #6366f1, #a855f7); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
-        .card { 
-            background: rgba(255, 255, 255, 0.02); 
-            backdrop-filter: blur(12px); 
-            border: 1px solid rgba(255, 255, 255, 0.05); 
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            border-color: rgba(99, 102, 241, 0.4);
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.04);
-        }
-        #glow {
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0,0,0,0) 70%);
-            position: fixed;
-            pointer-events: none;
+        body { background-color: #050505; color: #e5e7eb; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(90deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.3s ease; }
+        .card:hover { border-color: rgba(99, 102, 241, 0.4); transform: translateY(-5px); background: rgba(255, 255, 255, 0.04); }
+        #glow { width: 600px; height: 600px; background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0,0,0,0) 70%); position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: 0.1s linear; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <div id="glow"></div>
+
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center backdrop-blur-md border-b border-white/5">
+        <div class="font-black text-xl tracking-tighter uppercase">Shadow <span class="text-indigo-500">Milk</span></div>
+        <div class="flex gap-8 text-sm font-bold uppercase tracking-widest text-gray-400">
+            <a href="#modules" class="hover:text-white transition">Modules</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=1461867308065488967" class="text-indigo-500 hover:text-indigo-400 transition">Invite</a>
+        </div>
+    </nav>
+
+    <section class="min-h-[70vh] flex flex-col items-center justify-center text-center px-4 relative">
+        <div class="absolute w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] -z-10"></div>
+        <h1 class="text-6xl md:text-7xl font-black mb-6 tracking-tight">The <span class="gradient-text">Archive</span> Modules</h1>
+        <p class="text-lg text-gray-400 max-w-2xl mb-10 leading-relaxed">
+            Every command is a specialized script designed for the perfect performance. 
+            Explore the public directories of the Shadow Milk Cookie.
+        </p>
+        <a href="https://discord.com/oauth2/authorize?client_id=1461867308065488967" 
+           class="px-10 py-4 bg-indigo-600 hover:bg-indigo-500 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-indigo-600/20">
+           Add to Theater
+        </a>
+    </section>
+
+    <section id="modules" class="py-12 px-8 max-w-6xl mx-auto pb-32">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="card p-8 rounded-3xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="text-3xl">📁</span>
+                    <h3 class="text-xl font-bold uppercase tracking-widest text-indigo-400">Economy</h3>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Manage the theater's wealth. Includes 8 scripts for balance control, transactions, and financial interactions.
+                </p>
+            </div>
+
+            <div class="card p-8 rounded-3xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="text-3xl">📁</span>
+                    <h3 class="text-xl font-bold uppercase tracking-widest text-indigo-400">Moderation</h3>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    The iron fist of the Archive. 14 scripts designed to maintain order and discipline among the puppets.
+                </p>
+            </div>
+
+            <div class="card p-8 rounded-3xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="text-3xl">📁</span>
+                    <h3 class="text-xl font-bold uppercase tracking-widest text-indigo-400">Reputation</h3>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Track the influence of every actor. Specialized scripts to manage social standing within the server.
+                </p>
+            </div>
+
+            <div class="card p-8 rounded-3xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="text-3xl">📁</span>
+                    <h3 class="text-xl font-bold uppercase tracking-widest text-indigo-400">Roleplay</h3>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Bring the stage to life. 11 scripts for immersive interactions and character-driven performances.
+                </p>
+            </div>
+
+            <div class="card p-8 rounded-3xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="text-3xl">📁</span>
+                    <h3 class="text-xl font-bold uppercase tracking-widest text-indigo-400">Utility</h3>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Essential tools for the audience. 9 scripts for information, server stats, and general assistance.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-white/5 opacity-50">
+        <p class="text-xs tracking-[0.3em] uppercase">Shadow Milk Project | Multiverse Archive</p>
+    </footer>
+
+    <script>
+        const glow = document.getElementById('glow');
+        window.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+    </script>
+
+</body>
+</html>            pointer-events: none;
             z-index: 9999;
             transform: translate(-50%, -50%);
             transition: 0.1s linear;

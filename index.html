@@ -9,37 +9,40 @@
     <style>
         body { background-color: #050505; color: #e5e7eb; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
         
-        /* Background da tua imagem com tratamento visual */
+        /* Background Cinematic Treatment */
         .hero-bg {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            /* COLA O LINK DA TUA IMAGEM ABAIXO */
-            background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.85)), url('https://cdn.discordapp.com/attachments/1372130398150201405/1466952035785248921/7Special.jpg?ex=697e9d0b&is=697d4b8b&hm=477bd9b0f852be538528484d256308f3942ccb78ee344f4f159cc38f0db73692&');
+            /* Certifica-te que a imagem está na mesma pasta com este nome */
+            background: linear-gradient(rgba(5, 5, 5, 0.6), rgba(5, 5, 5, 0.9)), url('7(Special).jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             z-index: -1;
-            filter: contrast(1.1) brightness(0.7);
         }
 
         .gradient-text { background: linear-gradient(90deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
-        /* Cards semi-transparentes para destacar a imagem de fundo */
+        /* Glassmorphism for Cards */
         .card { 
-            background: rgba(0, 0, 0, 0.6); 
-            backdrop-filter: blur(10px); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-            transition: all 0.3s ease; 
+            background: rgba(0, 0, 0, 0.5); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
         }
-        .card:hover { border-color: rgba(99, 102, 241, 0.6); transform: translateY(-5px); background: rgba(0, 0, 0, 0.7); }
+        .card:hover { border-color: rgba(99, 102, 241, 0.6); transform: scale(1.02); background: rgba(0, 0, 0, 0.7); }
         
         #glow { 
             width: 500px; height: 500px; 
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0,0,0,0) 70%); 
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(0,0,0,0) 70%); 
             position: fixed; pointer-events: none; z-index: 9999; 
             transform: translate(-50%, -50%); display: none; 
         }
         @media (min-width: 768px) { #glow { display: block; } }
+
+        /* Smooth reveal animation */
+        .reveal { animation: fadeIn 1.5s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -47,84 +50,85 @@
     <div class="hero-bg"></div>
     <div id="glow"></div>
 
-    <nav class="fixed w-full z-50 backdrop-blur-md border-b border-white/10">
+    <nav class="fixed w-full z-50 backdrop-blur-md border-b border-white/5">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-black text-xl tracking-tighter uppercase italic">SHADOW <span class="text-indigo-500">MILK</span></div>
-            <div class="flex gap-6 text-[10px] md:text-sm font-bold uppercase tracking-widest">
+            <div class="font-black text-lg md:text-xl tracking-tighter uppercase italic">SHADOW <span class="text-indigo-500">MILK</span></div>
+            <div class="flex gap-4 md:gap-8 text-[10px] md:text-sm font-bold uppercase tracking-widest">
                 <a href="#modules" class="text-gray-300 hover:text-white transition">Archive</a>
-                <a href="https://discord.com/oauth2/authorize?client_id=1461867308065488967" class="text-indigo-500 border border-indigo-500/50 px-4 py-1 rounded-full hover:bg-indigo-500 hover:text-white transition">Invite</a>
+                <a href="https://discord.com/oauth2/authorize?client_id=1461867308065488967&permissions=8&scope=bot%20applications.commands" class="text-indigo-400 border border-indigo-500/30 px-4 py-1 rounded-full hover:bg-indigo-500 hover:text-white transition">Invite</a>
             </div>
         </div>
     </nav>
 
-    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative">
+    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative reveal">
         <h1 class="text-6xl md:text-9xl font-black mb-4 tracking-tighter drop-shadow-2xl">THE <span class="gradient-text">ARCHIVE</span></h1>
-        <p class="text-sm md:text-xl text-gray-200 max-w-2xl mb-10 leading-relaxed font-semibold drop-shadow-md">
-            The multiverse theater is under control. High-performance scripts for the ultimate performance.
+        <p class="text-sm md:text-xl text-gray-200 max-w-2xl mb-10 leading-relaxed font-semibold drop-shadow-lg">
+            "The theater of the multiverse is but a play, and I hold all the strings."
         </p>
-        <a href="#modules" class="animate-bounce text-indigo-400 text-3xl font-light">↓</a>
+        <a href="#modules" class="animate-bounce text-indigo-400 text-3xl">↓</a>
     </section>
 
     <section id="modules" class="py-20 px-6 max-w-6xl mx-auto pb-40">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             
             <div class="card p-8 rounded-3xl">
                 <div class="flex items-center gap-4 mb-4">
-                    <span class="text-3xl text-indigo-400 font-bold">#</span>
+                    <span class="text-3xl text-indigo-500">📁</span>
                     <h3 class="text-lg font-black uppercase tracking-widest text-white">Economy</h3>
                 </div>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                    Advanced financial scripts for currency management, secure transactions, and server-wide audits.
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Advanced financial systems. Manage wealth, transactions, and theater audits with ease.
                 </p>
             </div>
 
             <div class="card p-8 rounded-3xl">
                 <div class="flex items-center gap-4 mb-4">
-                    <span class="text-3xl text-indigo-400 font-bold">#</span>
+                    <span class="text-3xl text-indigo-500">📁</span>
                     <h3 class="text-lg font-black uppercase tracking-widest text-white">Moderation</h3>
                 </div>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                    Complete administrative suite to maintain discipline. Clean, fast, and unyielding enforcement.
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Unyielding control. Maintain order and discipline across your server's stages.
                 </p>
             </div>
 
             <div class="card p-8 rounded-3xl">
                 <div class="flex items-center gap-4 mb-4">
-                    <span class="text-3xl text-indigo-400 font-bold">#</span>
+                    <span class="text-3xl text-indigo-500">📁</span>
                     <h3 class="text-lg font-black uppercase tracking-widest text-white">Reputation</h3>
                 </div>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                    Social influence systems to track and manage user standing across the multiverse layers.
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Track social standing. Influence and prestige management for every puppet.
                 </p>
             </div>
 
             <div class="card p-8 rounded-3xl">
                 <div class="flex items-center gap-4 mb-4">
-                    <span class="text-3xl text-indigo-400 font-bold">#</span>
+                    <span class="text-3xl text-indigo-500">📁</span>
                     <h3 class="text-lg font-black uppercase tracking-widest text-white">Roleplay</h3>
                 </div>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                    Scripts built for immersion. Character interactions, dynamic storytelling, and social acts.
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Immersive storytelling. Scripts designed for character interaction and social acts.
                 </p>
             </div>
 
             <div class="card p-8 rounded-3xl">
                 <div class="flex items-center gap-4 mb-4">
-                    <span class="text-3xl text-indigo-400 font-bold">#</span>
+                    <span class="text-3xl text-indigo-500">📁</span>
                     <h3 class="text-lg font-black uppercase tracking-widest text-white">Utility</h3>
                 </div>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                    The core toolset. System diagnostics, server information, and real-time user data retrieval.
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Core toolset. Diagnostics, information retrieval, and system management.
                 </p>
             </div>
 
         </div>
     </section>
 
-    <footer class="py-16 text-center bg-black/90 backdrop-blur-xl px-6 border-t border-white/5">
-        <p class="text-[10px] tracking-[0.5em] uppercase text-indigo-500/80 font-bold">
-            Operated by the Director | ID: 971381693971824700
+    <footer class="py-16 text-center bg-black/80 backdrop-blur-xl border-t border-white/5">
+        <p class="text-[10px] tracking-[0.5em] uppercase text-indigo-500/60 font-bold mb-2">
+            Shadow Milk Cookie | Multiverse Archive
         </p>
+        <p class="text-[8px] text-gray-600 uppercase">Director ID: 971381693971824700</p>
     </footer>
 
     <script>

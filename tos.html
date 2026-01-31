@@ -2,61 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service | Shadow Milk Archive</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #e5e7eb; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
+        body { background-color: #050505; color: #e5e7eb; font-family: 'Inter', sans-serif; }
         .hero-bg {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(rgba(5, 5, 5, 0.75), rgba(5, 5, 5, 0.9)), url('https://cdn.discordapp.com/attachments/1372130398150201405/1466952035785248921/7Special.jpg?ex=697e9d0b&is=697d4b8b&hm=477bd9b0f852be538528484d256308f3942ccb78ee344f4f159cc38f0db73692&');
+            background: linear-gradient(rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.95)), url('https://cdn.discordapp.com/attachments/1372130398150201405/1466952035785248921/7Special.jpg?ex=697e9d0b&is=697d4b8b&hm=477bd9b0f852be538528484d256308f3942ccb78ee344f4f159cc38f0db73692&');
             background-size: cover; background-position: center; z-index: -1;
         }
-        .card { background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .gradient-text { background: linear-gradient(90deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); }
     </style>
 </head>
-<body class="overflow-x-hidden">
+<body class="flex flex-col min-h-screen">
     <div class="hero-bg"></div>
-
-    <nav class="fixed w-full z-50 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="font-black text-lg tracking-tighter uppercase italic">SHADOW <span class="text-indigo-500">MILK</span></a>
-            <a href="index.html" class="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-white transition">← Back to Archive</a>
-        </div>
+    <nav class="p-8">
+        <a href="./index.html" class="text-xs font-black uppercase tracking-[0.3em] text-indigo-500 hover:text-white transition-colors">← Back to Theatre</a>
     </nav>
-
-    <main class="min-h-screen pt-32 pb-20 px-6">
-        <div class="max-w-4xl mx-auto card p-8 md:p-12 rounded-3xl shadow-2xl">
-            <h1 class="text-4xl md:text-5xl font-black mb-8 tracking-tighter uppercase italic"><span class="gradient-text">Terms</span> of Service</h1>
-            
-            <div class="space-y-8 text-gray-300 leading-relaxed text-sm md:text-base">
-                <section>
-                    <h2 class="text-xl font-bold text-white mb-3 uppercase tracking-wider text-indigo-400">1. Acceptance</h2>
-                    <p>By integrating the Shadow Milk Cookie into your Discord server, you acknowledge and agree to abide by these terms. The Director reserves the right to modify these scripts and terms at any time.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold text-white mb-3 uppercase tracking-wider text-indigo-400">2. Prohibited Conduct</h2>
-                    <p>Users are strictly forbidden from attempting to reverse-engineer the Archive's scripts, exploiting bot vulnerabilities, or using the bot to violate Discord's Global Terms of Service.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold text-white mb-3 uppercase tracking-wider text-indigo-400">3. Limitations</h2>
-                    <p>The service is provided "as is". We are not responsible for accidental data corruption within your server's local stage. Use the power of the Archive wisely.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold text-white mb-3 uppercase tracking-wider text-indigo-400">4. Termination</h2>
-                    <p>The Director holds the absolute right to blacklist any server or puppet that disrupts the harmony of the multiverse theater.</p>
-                </section>
+    <main class="flex-grow flex items-center justify-center p-6">
+        <div class="max-w-3xl w-full card p-10 md:p-16 rounded-[2.5rem] shadow-2xl">
+            <h1 class="text-3xl md:text-5xl font-black mb-10 tracking-tighter uppercase italic text-indigo-500">Terms <span class="text-white">of Service</span></h1>
+            <div class="space-y-8 text-gray-400 text-sm md:text-base leading-relaxed">
+                <section><h2 class="text-white font-bold uppercase tracking-widest mb-2">1. Acceptance</h2><p>By using this bot, you agree to these terms. The Director can change the theater rules at any time.</p></section>
+                <section><h2 class="text-white font-bold uppercase tracking-widest mb-2">2. Usage</h2><p>Illegal activities or exploiting bot scripts will lead to a permanent ban from the Archive.</p></section>
+                <section><h2 class="text-white font-bold uppercase tracking-widest mb-2">3. No Warranty</h2><p>Service is provided "as is". Use the Archive at your own risk.</p></section>
             </div>
         </div>
     </main>
-
-    <footer class="py-12 text-center opacity-50 text-[10px] uppercase tracking-[0.4em]">
-        Shadow Milk Project | Secured Archive
-    </footer>
 </body>
 </html>

@@ -5,36 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>The Playbook | Shadow Milk Archive</title>
     <style>
-        :root { --primary: #a855f7; --glass: rgba(10, 10, 20, 0.95); --text: #f8fafc; }
+        :root { --primary: #a855f7; --glass: rgba(10, 10, 20, 0.96); --text: #f8fafc; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { height: 100%; overflow-x: hidden; }
-        body { color: var(--text); font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; min-height: 100vh; padding: 40px 20px; }
+        html, body { min-height: 100%; }
+        body { color: var(--text); font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; }
         body::before {
             content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: url('https://cdn.discordapp.com/attachments/1372130398150201405/1466952035785248921/7Special.jpg?ex=6980974b&is=697f45cb&hm=578cd276d12fb4d29d82a993169d57d4a5be2c0d7c12a2843101ceb891458cf3&') no-repeat center center;
             background-size: cover; z-index: -2;
         }
-        body::after { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.75); z-index: -1; }
-        .doc-box { max-width: 800px; width: 100%; background: var(--glass); padding: 40px; border-radius: 30px; border: 1px solid var(--primary); backdrop-filter: blur(25px); height: fit-content; box-shadow: 0 0 50px rgba(0,0,0,0.5); }
-        h1 { color: var(--primary); border-bottom: 2px solid rgba(168,85,247,0.3); padding-bottom: 10px; margin-bottom: 25px; font-size: 1.8rem; text-transform: uppercase; letter-spacing: 2px; }
-        h3 { color: #6366f1; margin-top: 25px; font-size: 1rem; text-transform: uppercase; }
-        p, li { opacity: 0.9; line-height: 1.7; margin-bottom: 10px; font-size: 0.95rem; }
-        .back-btn { display: inline-block; color: var(--primary); text-decoration: none; font-weight: bold; margin-bottom: 20px; font-size: 0.8rem; text-transform: uppercase; }
+        body::after { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: -1; }
+        
+        .container { max-width: 900px; width: 100%; padding: 60px 20px; flex: 1; }
+        .doc-box { 
+            background: var(--glass); padding: clamp(30px, 5vw, 60px); border-radius: 40px; 
+            border: 1px solid var(--primary); backdrop-filter: blur(30px); 
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 20px rgba(168, 85, 247, 0.1); 
+        }
+        h1 { color: var(--primary); border-bottom: 2px solid rgba(168,85,247,0.3); padding-bottom: 15px; margin-bottom: 30px; font-size: 2.2rem; text-transform: uppercase; letter-spacing: 3px; }
+        h3 { color: #6366f1; margin-top: 35px; font-size: 1.1rem; text-transform: uppercase; border-left: 4px solid var(--primary); padding-left: 15px; }
+        p, li { opacity: 0.9; line-height: 1.8; margin-bottom: 15px; font-size: 1.05rem; }
+        .back-btn { display: inline-block; color: var(--primary); text-decoration: none; font-weight: bold; margin-bottom: 30px; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s; }
+        .back-btn:hover { letter-spacing: 1px; }
+        footer { width: 100%; padding: 40px; text-align: center; font-size: 0.8rem; opacity: 0.6; margin-top: 40px; }
     </style>
 </head>
 <body>
-    <div class="doc-box">
+    <div class="container">
         <a href="index.html" class="back-btn">← Back to The Theater</a>
-        <h1>THE PLAYBOOK</h1>
-        <p>The rules of the stage are absolute. By interacting with the Director, you accept these strings:</p>
-        
-        <h3>1. Actor Performance</h3>
-        <p>No exploitation of <b>Economy</b> or <b>Reputation</b> modules is permitted. Any attempt to sabotage the Archive's <b>Utility</b> or <b>Moderation</b> systems will lead to an immediate ban.</p>
-        
-        <h3>2. Sovereign Rights</h3>
-        <p>The Director (ID: 971381693971824700) reserves the right to wipe any dossier or roleplay history to maintain the purity of the espetáculo.</p>
-        
-        <a href="https://discord.gg/r9QKNEvhBK" style="display:block; text-align:center; padding:15px; background:var(--primary); color:white; text-decoration:none; border-radius:12px; font-weight:bold; margin-top:30px;">ENTER THE DOMAIN</a>
+        <div class="doc-box">
+            <h1>THE PLAYBOOK</h1>
+            <p>The strings of this Archive are bound by the following decrees. By engaging with the stage, you accept the Director's script.</p>
+            
+            <h3>I. Puppet Behavior</h3>
+            <p>Any exploitation of the <b>Economy</b> (Fragments) or <b>Reputation</b> systems to gain an unfair advantage is a violation of the play. Sabotaging <b>Moderation</b> or <b>Utility</b> commands will result in immediate removal from the Archive.</p>
+            
+            <h3>II. Sovereign Authority</h3>
+            <p>The Director (ID: 971381693971824700) holds absolute power over all dossiers. Roles, fragments, and roleplay progress can be reset at the Director's whim to maintain the Archive's integrity.</p>
+            
+            <a href="https://discord.gg/r9QKNEvhBK" style="display:block; text-align:center; padding:18px; background:var(--primary); color:white; text-decoration:none; border-radius:15px; font-weight:bold; margin-top:40px; box-shadow: 0 10px 30px rgba(168,85,247,0.3);">ENTER THE DOMAIN</a>
+        </div>
     </div>
+    <footer>Shadow Milk Archive © 2026</footer>
 </body>
 </html>

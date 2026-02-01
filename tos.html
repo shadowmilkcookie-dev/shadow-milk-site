@@ -2,34 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service | Shadow Milk Archive</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #e5e7eb; font-family: 'Inter', sans-serif; }
-        .hero-bg {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.95)), url('https://cdn.discordapp.com/attachments/1372130398150201405/1466952035785248921/7Special.jpg?ex=697e9d0b&is=697d4b8b&hm=477bd9b0f852be538528484d256308f3942ccb78ee344f4f159cc38f0db73692&');
-            background-size: cover; background-position: center; z-index: -1;
-        }
-        .card { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        :root { --primary: #a855f7; --glass: rgba(10, 10, 20, 0.95); --text: #f8fafc; }
+        body { background: url('https://cdn.discordapp.com/attachments/1372130398150201405/1466952035785248921/7Special.jpg?ex=6980974b&is=697f45cb&hm=578cd276d12fb4d29d82a993169d57d4a5be2c0d7c12a2843101ceb891458cf3&') no-repeat center center fixed; background-size: cover; color: var(--text); font-family: sans-serif; display: flex; justify-content: center; min-height: 100vh; margin: 0; padding: 40px 20px; }
+        .doc-box { max-width: 850px; background: var(--glass); padding: 50px; border-radius: 35px; border: 1px solid var(--primary); backdrop-filter: blur(25px); box-shadow: 0 0 60px rgba(0,0,0,0.9); height: fit-content; }
+        h1 { color: var(--primary); border-bottom: 2px solid rgba(168,85,247,0.3); padding-bottom: 10px; margin-bottom: 30px; }
+        h3 { color: #6366f1; margin-top: 30px; text-transform: uppercase; font-size: 1rem; }
+        p, li { opacity: 0.9; line-height: 1.8; margin-bottom: 15px; }
+        ul { margin-left: 20px; margin-bottom: 20px; }
     </style>
 </head>
-<body class="flex flex-col min-h-screen">
-    <div class="hero-bg"></div>
-    <nav class="p-8">
-        <a href="./index.html" class="text-xs font-black uppercase tracking-[0.3em] text-indigo-500 hover:text-white transition-colors">← Back to Theatre</a>
-    </nav>
-    <main class="flex-grow flex items-center justify-center p-6">
-        <div class="max-w-3xl w-full card p-10 md:p-16 rounded-[2.5rem] shadow-2xl">
-            <h1 class="text-3xl md:text-5xl font-black mb-10 tracking-tighter uppercase italic text-indigo-500">Terms <span class="text-white">of Service</span></h1>
-            <div class="space-y-8 text-gray-400 text-sm md:text-base leading-relaxed">
-                <section><h2 class="text-white font-bold uppercase tracking-widest mb-2">1. Acceptance</h2><p>By using this bot, you agree to these terms. The Director can change the theater rules at any time.</p></section>
-                <section><h2 class="text-white font-bold uppercase tracking-widest mb-2">2. Usage</h2><p>Illegal activities or exploiting bot scripts will lead to a permanent ban from the Archive.</p></section>
-                <section><h2 class="text-white font-bold uppercase tracking-widest mb-2">3. No Warranty</h2><p>Service is provided "as is". Use the Archive at your own risk.</p></section>
-            </div>
-        </div>
-    </main>
+<body>
+    <div class="doc-box">
+        <a href="index.html" style="color:var(--primary); text-decoration:none; font-weight:bold;">← BACK TO STAGE</a>
+        <h1>TERMS OF SERVICE</h1>
+        <p>By using Shadow Milk Archive, you agree to follow the Director's scripts. Failure to do so will lead to your removal from the stage.</p>
+        
+        <h3>1. Usage & Conduct</h3>
+        <ul>
+            <li>Puppets must not exploit bugs in the <b>Economy</b> or <b>Leveling</b> systems.</li>
+            <li>Spamming commands to disrupt the Archive's performance is prohibited.</li>
+            <li>Self-botting or automated scripts to gain Fragments is a breach of the Archive's integrity.</li>
+        </ul>
+
+        <h3>2. The Director's Authority</h3>
+        <p>The Owner (ID: 971381693971824700) reserves the right to blacklist any puppet or wipe dossiers found in violation of these terms.</p>
+
+        <h3>3. Service Availability</h3>
+        <p>The Archive is provided "as-is". Maintenance may occur to add new Chapters or fix the threads of reality.</p>
+        
+        <a href="https://discord.gg/r9QKNEvhBK" style="display:inline-block; padding:12px 25px; background:var(--primary); color:white; text-decoration:none; border-radius:10px; font-weight:bold;">JOIN THE REALM</a>
+    </div>
 </body>
 </html>

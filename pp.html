@@ -2,30 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PP | Shadow Milk Archive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Records | Shadow Milk Archive</title>
     <style>
         :root { --accent: #6366f1; --glass: rgba(10, 10, 20, 0.95); --text: #f8fafc; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { color: var(--text); font-family: sans-serif; display: flex; justify-content: center; min-height: 100vh; padding: 40px 20px; }
-        body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('https://cdn.discordapp.com/attachments/1372130398150201405/1466952035785248921/7Special.jpg?ex=6980974b&is=697f45cb&hm=578cd276d12fb4d29d82a993169d57d4a5be2c0d7c12a2843101ceb891458cf3&') no-repeat center center; background-size: cover; z-index: -2; }
-        body::after { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: -1; }
+        html, body { height: 100%; overflow-x: hidden; }
+        body { color: var(--text); font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; min-height: 100vh; padding: 40px 20px; }
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://cdn.discordapp.com/attachments/1372130398150201405/1466952035785248921/7Special.jpg?ex=6980974b&is=697f45cb&hm=578cd276d12fb4d29d82a993169d57d4a5be2c0d7c12a2843101ceb891458cf3&') no-repeat center center;
+            background-size: cover; z-index: -2;
+        }
+        body::after { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.75); z-index: -1; }
         .doc-box { max-width: 800px; width: 100%; background: var(--glass); padding: 40px; border-radius: 30px; border: 1px solid var(--accent); backdrop-filter: blur(20px); height: fit-content; }
-        h1 { color: var(--accent); border-bottom: 2px solid rgba(99,102,241,0.3); padding-bottom: 10px; margin-bottom: 25px; font-size: 1.8rem; }
+        h1 { color: var(--accent); border-bottom: 2px solid rgba(99,102,241,0.3); padding-bottom: 10px; margin-bottom: 25px; font-size: 1.8rem; text-transform: uppercase; letter-spacing: 2px; }
         h3 { color: #a855f7; margin-top: 25px; font-size: 1rem; text-transform: uppercase; }
-        p, li { opacity: 0.9; line-height: 1.7; margin-bottom: 10px; }
+        p, li { opacity: 0.9; line-height: 1.7; margin-bottom: 10px; font-size: 0.95rem; }
+        .back-btn { display: inline-block; color: var(--accent); text-decoration: none; font-weight: bold; margin-bottom: 20px; font-size: 0.8rem; text-transform: uppercase; }
     </style>
 </head>
 <body>
     <div class="doc-box">
-        <a href="index.html" style="color:var(--accent); text-decoration:none; font-weight:bold;">← BACK</a>
-        <h1>THE VAULT</h1>
-        <p>Your privacy is protected within the Vault.</p>
-        <h3>Data Usage</h3>
-        <p>We only store Discord IDs, Shadow Fragments, and Progress levels. No private messages or guild data are logged outside the bot's direct interactions.</p>
-        <h3>Data Removal</h3>
-        <p>To burn your dossier and remove all data, visit the official realm and contact the Director.</p>
-        <a href="https://discord.gg/r9QKNEvhBK" style="display:block; text-align:center; padding:15px; background:var(--accent); color:white; text-decoration:none; border-radius:12px; font-weight:bold; margin-top:30px;">OFFICIAL REALM</a>
+        <a href="index.html" class="back-btn">← Back to The Theater</a>
+        <h1>THE RECORDS</h1>
+        <p>Every movement of the puppets is recorded within the Archive's vault.</p>
+        
+        <h3>Information Collected</h3>
+        <p>We store Discord IDs, <b>Economy</b> Fragments, and <b>Reputation</b> points to maintain your standing in the Archive. <b>Roleplay</b> logs and <b>Cookie Kingdom</b> progress are also archived for continuity.</p>
+        
+        <h3>The Right to be Forgotten</h3>
+        <p>Any actor may request to have their records burned. Contact the Director in the <b>Domain</b> for a complete dossier wipe.</p>
+        
+        <a href="https://discord.gg/r9QKNEvhBK" style="display:block; text-align:center; padding:15px; background:var(--accent); color:white; text-decoration:none; border-radius:12px; font-weight:bold; margin-top:30px;">THE DOMAIN</a>
     </div>
 </body>
 </html>

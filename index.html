@@ -2,112 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    
-    <title>Shadow Milk Cookie | Official Archive</title>
-    <meta property="og:title" content="Shadow Milk Cookie | Official Archive">
-    <meta property="og:description" content="The theater of the multiverse is but a play, and I hold all the strings.">
-    <meta property="og:image" content="7(Special).jpg">
-    <meta name="theme-color" content="#6366f1">
-    <link rel="icon" type="image/jpg" href="7(Special).jpg">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Milk Archive | Official Stage</title>
     <style>
-        body { background-color: #050505; color: #e5e7eb; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .hero-bg {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(rgba(5, 5, 5, 0.65), rgba(5, 5, 5, 0.95)), url('https://cdn.discordapp.com/attachments/1372130398150201405/1466952035785248921/7Special.jpg?ex=697e9d0b&is=697d4b8b&hm=477bd9b0f852be538528484d256308f3942ccb78ee344f4f159cc38f0db73692&');
-            background-size: cover; background-position: center; z-index: -1;
+        :root { --primary: #a855f7; --accent: #6366f1; --glass: rgba(10, 10, 20, 0.9); --text: #f8fafc; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: url('https://cdn.discordapp.com/attachments/1372130398150201405/1466952035785248921/7Special.jpg?ex=6980974b&is=697f45cb&hm=578cd276d12fb4d29d82a993169d57d4a5be2c0d7c12a2843101ceb891458cf3&') no-repeat center center fixed;
+            background-size: cover; color: var(--text); font-family: 'Inter', system-ui, sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center;
         }
-        .gradient-text { background: linear-gradient(90deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card { background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s ease; }
-        .card:hover { border-color: rgba(99, 102, 241, 0.6); transform: translateY(-8px); box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.3); }
-        
-        #glow { 
-            width: 500px; height: 500px; 
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0,0,0,0) 70%); 
-            position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); display: none; 
-        }
-        @media (min-width: 768px) { #glow { display: block; } }
-        
-        .fade-in { animation: fadeIn 1.2s ease-out forwards; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: -1; }
+        .container { max-width: 1100px; width: 100%; padding: 40px 20px; }
+        nav { display: flex; justify-content: center; gap: clamp(10px, 4vw, 40px); padding: 15px 30px; background: var(--glass); backdrop-filter: blur(20px); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 100px; margin-bottom: 60px; position: sticky; top: 20px; z-index: 100; }
+        nav a { color: var(--text); text-decoration: none; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.4s; opacity: 0.7; }
+        nav a:hover { opacity: 1; color: var(--primary); text-shadow: 0 0 10px var(--primary); }
+        header { text-align: center; margin-bottom: 80px; }
+        h1 { font-size: clamp(2.5rem, 8vw, 5.5rem); font-weight: 900; background: linear-gradient(to bottom, #fff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { font-size: 1.2rem; font-style: italic; margin-top: 10px; opacity: 0.8; }
+        .btn-invite { display: inline-block; margin-top: 30px; padding: 18px 50px; background: var(--primary); color: white; text-decoration: none; border-radius: 15px; font-weight: 800; font-size: 1.1rem; box-shadow: 0 0 30px rgba(168, 85, 247, 0.5); transition: 0.4s; border: 1px solid rgba(255,255,255,0.2); }
+        .btn-invite:hover { transform: scale(1.05); box-shadow: 0 0 50px var(--primary); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: var(--glass); padding: 35px; border-radius: 25px; border: 1px solid rgba(168, 85, 247, 0.2); backdrop-filter: blur(15px); transition: 0.4s; }
+        .card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.6rem; }
+        .card p { opacity: 0.9; line-height: 1.6; }
     </style>
 </head>
-<body class="overflow-x-hidden">
-    <div class="hero-bg"></div>
-    <div id="glow"></div>
-
-    <nav class="fixed w-full z-50 backdrop-blur-xl border-b border-white/5">
-        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="font-black text-xl tracking-tighter uppercase italic">SHADOW <span class="text-indigo-500">MILK</span></div>
-            <div class="flex gap-6 items-center">
-                <a href="#modules" class="hidden md:block text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-white transition">Archive</a>
-                <a href="https://discord.com/oauth2/authorize?client_id=1461867308065488967&permissions=8&scope=bot%20applications.commands" 
-                   class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-indigo-400 border border-indigo-500/40 px-5 py-2 rounded-full hover:bg-indigo-500 hover:text-white transition-all shadow-lg shadow-indigo-500/10">Invite</a>
-            </div>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">Stage</a>
+            <a href="tos.html">Scripts</a>
+            <a href="privacy.html">Vault</a>
+            <a href="https://discord.gg/r9QKNEvhBK" target="_blank" style="color: var(--accent);">Realm</a>
+        </nav>
+        <header>
+            <h1>SHADOW MILK</h1>
+            <p class="subtitle">"Where truth is hidden behind the threads of the Archive."</p>
+            <a href="https://discord.com/oauth2/authorize?client_id=1461867308065488967&permissions=8&scope=bot%20applications.commands" class="btn-invite">INVITE THE DIRECTOR</a>
+        </header>
+        <div class="grid">
+            <div class="card"><h3>🎭 Economy</h3><p>Manage Shadow Fragments, collect Stage Props, and claim Daily Rewards to rise in the dossier.</p></div>
+            <div class="card"><h3>📜 Utility</h3><p>Detailed actor dossiers and puppet inspections to keep the stage organized.</p></div>
+            <div class="card"><h3>🛡️ Administration</h3><p>Elite sovereignty tools for the Director to manipulate the Archive's modules.</p></div>
         </div>
-    </nav>
-
-    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 fade-in">
-        <h1 class="text-7xl md:text-[10rem] font-black mb-4 tracking-tighter drop-shadow-2xl leading-none">THE <br><span class="gradient-text">ARCHIVE</span></h1>
-        <p class="text-sm md:text-xl text-gray-300 max-w-2xl mb-12 leading-relaxed font-medium opacity-90">
-            "The theater of the multiverse is a play, and I hold all the strings."
-        </p>
-        <a href="#modules" class="animate-bounce text-indigo-500/50 hover:text-indigo-500 transition-colors">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-        </a>
-    </section>
-
-    <section id="modules" class="py-24 px-6 max-w-6xl mx-auto pb-48">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="card p-10 rounded-[2rem] flex flex-col gap-4">
-                <span class="text-3xl">📁</span>
-                <h3 class="text-xl font-black uppercase tracking-widest text-white">Economy</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Advanced financial systems for currency management and theater audits.</p>
-            </div>
-            <div class="card p-10 rounded-[2rem] flex flex-col gap-4">
-                <span class="text-3xl">📁</span>
-                <h3 class="text-xl font-black uppercase tracking-widest text-white">Moderation</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Unyielding control to maintain order across every stage of your server.</p>
-            </div>
-            <div class="card p-10 rounded-[2rem] flex flex-col gap-4">
-                <span class="text-3xl">📁</span>
-                <h3 class="text-xl font-black uppercase tracking-widest text-white">Reputation</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Social influence systems to track every puppet's standing and prestige.</p>
-            </div>
-            <div class="card p-10 rounded-[2rem] flex flex-col gap-4">
-                <span class="text-3xl">📁</span>
-                <h3 class="text-xl font-black uppercase tracking-widest text-white">Roleplay</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Immersive storytelling scripts for character interaction and social acts.</p>
-            </div>
-            <div class="card p-10 rounded-[2rem] flex flex-col gap-4">
-                <span class="text-3xl">📁</span>
-                <h3 class="text-xl font-black uppercase tracking-widest text-white">Utility</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">The core toolset for diagnostics, system management and info retrieval.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-20 text-center bg-black/90 backdrop-blur-2xl border-t border-white/5 px-6">
-        <div class="flex justify-center gap-10 mb-8 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500">
-            <a href="./tos.html" class="hover:text-indigo-400 transition-colors">Terms of Service</a>
-            <a href="./pp.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a>
-        </div>
-        <p class="text-[10px] tracking-[0.6em] uppercase text-indigo-500/40 font-black mb-2">SHADOW MILK PROJECT</p>
-        <p class="text-[8px] text-gray-700 uppercase tracking-widest">Director ID: 971381693971824700</p>
-    </footer>
-
-    <script>
-        const glow = document.getElementById('glow');
-        window.addEventListener('mousemove', (e) => {
-            if (window.innerWidth > 768) {
-                glow.style.left = e.clientX + 'px';
-                glow.style.top = e.clientY + 'px';
-            }
-        });
-    </script>
+    </div>
 </body>
 </html>

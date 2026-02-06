@@ -8,13 +8,13 @@
         :root { --primary: #a855f7; --accent: #6366f1; --glass: rgba(10, 10, 20, 0.94); --text: #f8fafc; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Garante que o body ocupe a altura toda para o footer não subir */
         html, body { height: 100%; margin: 0; }
         body { color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
 
+        /* FUNDO LOCAL CORRIGIDO */
         body::before {
             content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: url('https://cdn.discordapp.com/attachments/1372130398150201405/1466952035785248921/7Special.jpg?ex=6980974b&is=697f45cb&hm=578cd276d12fb4d29d82a993169d57d4a5be2c0d7c12a2843101ceb891458cf3&') no-repeat center center;
+            background: url('7(Special).jpg') no-repeat center center;
             background-size: cover; z-index: -2;
         }
 
@@ -29,7 +29,6 @@
             margin-bottom: 40px; position: sticky; top: 10px; z-index: 100;
         }
 
-        /* Fonte reduzida para 0.65rem para caber numa linha no telemóvel */
         nav a { color: var(--text); text-decoration: none; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8; transition: 0.3s; white-space: nowrap; }
         nav a:hover { opacity: 1; color: var(--primary); }
 
@@ -65,7 +64,7 @@
             <a href="https://discord.com/oauth2/authorize?client_id=YOUR_ID&permissions=8&scope=bot%20applications.commands" class="btn-invite">START THE SHOW</a>
         </header>
         <div class="grid">
-            <div class="card"><h3>🍪 Cookie Run Kingdom</h3><p>Specialized modules inspired by the main game (very obvious).</p></div>
+            <div class="card"><h3>🍪 Cookie Run Kingdom</h3><p>Specialized modules inspired by the main game.</p></div>
             <div class="card"><h3>🎭 Economy</h3><p>Collect Fragments and manage your theatrical fortune.</p></div>
             <div class="card"><h3>🛡️ Moderation</h3><p>Keep the stage clean and the puppets in line.</p></div>
             <div class="card"><h3>🌟 Reputation</h3><p>Track the fame and standing of every actor.</p></div>
@@ -73,6 +72,6 @@
             <div class="card"><h3>📜 Utility</h3><p>Precision tools for puppet dossier extraction.</p></div>
         </div>
     </div>
-    <footer>Shadow Milk Archive © 2026 | Directed by Sovereign ID: 971381693971824700 | Inspired by CRK and it's lore (obviously)</footer>
+    <footer>Shadow Milk Archive © 2026 | Directed by Sovereign ID: 971381693971824700 | Inspired by CRK lore</footer>
 </body>
 </html>

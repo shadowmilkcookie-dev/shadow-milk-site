@@ -34,21 +34,21 @@
             z-index: -1; 
         }
         
-        /* AJUSTE: Padding superior reduzido para alinhar com o index */
-        .container { max-width: 900px; width: 100%; padding: 10px 20px; flex: 1; margin: 0 auto; }
+        /* CONTAINER: Padding 20px idêntico ao index.html */
+        .container { max-width: 900px; width: 100%; padding: 20px; flex: 1; margin: 0 auto; }
 
+        /* NAV: Removido o fit-content para seguir o comportamento do index */
         nav { 
             display: flex; justify-content: center; gap: 12px; 
             padding: 12px 15px; background: var(--glass); backdrop-filter: blur(25px); 
             border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 50px; 
             margin-bottom: 40px; position: sticky; top: 10px; z-index: 100;
-            width: fit-content; margin-left: auto; margin-right: auto;
         }
 
         nav a { 
             color: var(--text); text-decoration: none; font-size: 0.65rem; 
             font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; 
-            opacity: 0.8; transition: 0.3s; 
+            opacity: 0.8; transition: 0.3s; white-space: nowrap;
         }
         nav a:hover { opacity: 1; color: var(--primary); }
         

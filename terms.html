@@ -35,16 +35,15 @@
             z-index: -1; 
         }
         
-        /* AJUSTE: Padding superior de 40px para 10px para alinhar com o index */
-        .container { max-width: 800px; width: 100%; padding: 10px 20px; flex: 1; margin: 0 auto; }
+        /* CONTAINER: Padding 20px idêntico ao index.html */
+        .container { max-width: 800px; width: 100%; padding: 20px; flex: 1; margin: 0 auto; }
 
-        /* NAV PADRÃO UNIFICADA */
+        /* NAV: Comportamento flexível idêntico ao index.html */
         nav { 
             display: flex; justify-content: center; gap: 12px; 
             padding: 12px 15px; background: var(--glass); backdrop-filter: blur(25px); 
             border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 50px; 
             margin-bottom: 40px; position: sticky; top: 10px; z-index: 100;
-            width: fit-content; margin-left: auto; margin-right: auto;
         }
 
         nav a { 
@@ -69,7 +68,14 @@
             margin-bottom: 20px; text-transform: uppercase; letter-spacing: -1px;
         }
 
-        .intro-text { font-style: italic; opacity: 0.7; margin-bottom: 30px; border-left: 3px solid var(--primary); padding-left: 15px; }
+        .intro-text { 
+            font-style: italic; 
+            opacity: 0.7; 
+            margin-bottom: 30px; 
+            border-left: 3px solid var(--primary); 
+            padding-left: 15px; 
+            line-height: 1.6;
+        }
         
         h3 { color: var(--accent); margin-top: 30px; margin-bottom: 10px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
         p { opacity: 0.9; line-height: 1.8; margin-bottom: 15px; font-size: 0.95rem; }

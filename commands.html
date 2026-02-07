@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Commands | Shadow Milk Archive</title>
+    <style>
+        :root { --primary: #a855f7; --accent: #6366f1; --glass: rgba(10, 10, 20, 0.94); --text: #f8fafc; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { color: var(--text); font-family: 'Segoe UI', sans-serif; min-height: 100vh; background: #05050a; }
+        body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('7(Special).jpg') no-repeat center center; background-size: cover; z-index: -2; }
+        body::after { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.75); z-index: -1; }
+        
+        .container { max-width: 900px; width: 100%; padding: 20px; margin: 0 auto; }
+        nav { display: flex; justify-content: center; gap: 12px; padding: 12px 15px; background: var(--glass); backdrop-filter: blur(25px); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 50px; margin-bottom: 40px; position: sticky; top: 10px; z-index: 100; width: fit-content; margin-left: auto; margin-right: auto; }
+        nav a { color: var(--text); text-decoration: none; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; opacity: 0.8; }
+        
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { font-size: 2.5rem; font-weight: 900; color: var(--primary); text-transform: uppercase; }
+
+        .category { margin-bottom: 25px; background: var(--glass); border-radius: 20px; border: 1px solid rgba(168, 85, 247, 0.15); padding: 20px; }
+        .category-title { color: var(--primary); font-weight: 800; margin-bottom: 15px; border-bottom: 1px solid rgba(168, 85, 247, 0.1); padding-bottom: 5px; }
+        
+        .cmd-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+        .cmd-item { background: rgba(168, 85, 247, 0.05); border: 1px solid rgba(168, 85, 247, 0.1); padding: 12px; border-radius: 10px; font-family: monospace; font-size: 0.85rem; }
+        .cmd-item span { color: var(--primary); font-weight: bold; display: block; margin-bottom: 4px; }
+        .cmd-item small { opacity: 0.7; font-family: 'Segoe UI'; display: block; line-height: 1.2; }
+
+        footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 0.7rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">Theater</a>
+            <a href="tos.html">Playbook</a>
+            <a href="pp.html">Records</a>
+            <a href="https://discord.gg/r9QKNEvhBK" target="_blank">Domain</a>
+        </nav>
+
+        <header>
+            <h1>Key Scripts</h1>
+            <p style="opacity: 0.7; font-style: italic;">The most vital strings of the archive.</p>
+        </header>
+
+        <section class="category">
+            <div class="category-title">🍪 Ancient Lore</div>
+            <div class="cmd-list">
+                <div class="cmd-item"><span>/shadowmilk</span><small>Summon the master of the archive.</small></div>
+                <div class="cmd-item"><span>/mysticflour</span><small>Dossier on the Beast of Apathy.</small></div>
+                <div class="cmd-item"><span>/burningspice</span><small>Dossier on the Beast of Destruction.</small></div>
+            </div>
+        </section>
+
+        <section class="category">
+            <div class="category-title">💰 Economy & Roleplay</div>
+            <div class="cmd-list">
+                <div class="cmd-item"><span>/explore</span><small>Search for Fragments in the multiverse.</small></div>
+                <div class="cmd-item"><span>/marry</span><small>Bind two puppets together on stage.</small></div>
+                <div class="cmd-item"><span>/steal</span><small>Take what belongs to others in the dark.</small></div>
+            </div>
+        </section>
+
+        <section class="category">
+            <div class="category-title">🛡️ System Control</div>
+            <div class="cmd-list">
+                <div class="cmd-item"><span>/nuke</span><small>Erase the stage dialogue instantly.</small></div>
+                <div class="cmd-item"><span>/setup</span><small>Initialize the Sovereign Archive modules.</small></div>
+                <div class="cmd-item"><span>/stats</span><small>Review the current performance data.</small></div>
+            </div>
+        </section>
+    </div>
+    <footer>Shadow Milk Archive | Version 1.0</footer>
+</body>
+</html>
